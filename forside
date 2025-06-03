@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forside</title>
+
+    <link rel="stylesheet" href="forside.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- en header kan bruges til logo hvis man ikke ville bruge en header ville man kunne bruge en main?-->
+<header class="header">
+    <img src="header.png" alt="Logo" class="logo">
+</header>
+
+
+
+
+<div class = "alle">
+
+    <div class="bokscitat" aria-label="Citat om ro">
+        <h1>Ro starter med én venlig tanke til dig selv</h1>
+
+    </div>
+
+
+
+
+
+
+    <!-- lav section om til div -->
+
+    <div class="boks2link">
+        <a class="linkboks" href="https://www.bog-ide.dk/hobby/mal-og-tegn/maleboeger/cozy" aria-label="Kreativ ro - malebøger">
+            <h2>Kreativ ro – prøv en af vores stress relief malebøger</h2>
+            <img src="arts%202.png" alt="art" class="art">
+
+        </a>
+    </div>
+
+
+
+
+
+
+    <div class="boks3underside">       <!--  kig på sidste del af style og sæt det ind i css-->
+        <a class = "linkboks" href="underside3.html" aria-label="Del dine tanker">
+            <h2>Del dine tanker – AI lytter uden at dømme</h2>
+        </a>
+    </div>
+
+
+
+
+
+
+    <div class="boks4underside2">
+        <a class = "linkboks" href="underside2.html" aria-label="Del dine oplevelser" >
+            <h2>Del dine oplevelser med en praktikant som dig</h2>
+        </a>
+    </div>
+
+</div>
+
+
+
+<nav class = "menu">
+    <img src="alt%20menu.png" alt="Bundmenu" class="menu-image">
+    <a href="forside.html" class="zone home-link" aria-label="Gå til forside"></a>
+    <a href="underside2.html" class="zone chat-link" aria-label="Gå til chat"></a>
+    <a href="underside3.html" class="zone profil-link" aria-label="Gå til profil"></a>
+</nav>
+
+</body>
+</html>
+
+body {
+    background-color: #F2E9CE;
+    max-width: 390px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+
+
+    .art{
+
+    }
+}
+.alle{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+
+}
+
+.linkboks{
+    text-decoration: none;
+    color: #F2B988;
+}
+
+
+.bokscitat,
+.boks2link,
+.boks3underside,
+.boks4underside2 {
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    color: #F2E9CE; /* ← dette er tekstfarven */
+    display: flex;
+
+
+}
+
+.logo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+section {
+    width: 100%;
+    max-width: 320px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 12px;
+    color: #F2E9CE;
+    text-align: center;
+
+}
+
+.bokscitat {
+    background-color: #F2B988;
+    position: relative;
+    height: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+
+}
+
+.boks2link {
+    background-color: #A65C41;
+    position: relative;
+    height: 80px;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+.boks3underside {
+    background-color: #BF6F41;
+    position: relative;
+    height: 80px;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 15px;
+    margin-right: 15px;
+
+
+
+}
+
+.boks4underside2 {
+    background-color: #404040;
+    position: relative;
+    height: 80px;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+section h1,
+section h2 {
+    font-size: 20px;
+    margin: 0;
+
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    height: auto;
+    display: block;
+    z-index: 999;
+}
+
+.menu-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.zone {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    z-index: 1000;
+}
+
+.home-link {
+    left: 20px;
+}
+
+.chat-link {
+    left: 140px;
+}
+
+.profil-link {
+    left: 260px;
+}
+@media screen and (min-width: 767px) {
+    body {
+        max-width: none;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .alle {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .linkboks {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+
+    }
+
+    section h1,
+    section h2 {
+        font-size: 18px;
+    }
+
+    .zone {
+        width: 70px;
+        height: 70px;
+    }
+}
